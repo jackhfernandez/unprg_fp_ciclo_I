@@ -3,16 +3,8 @@
 
 int n;int c=0; int s=0; int i;
 using namespace std;
-int multiplos(int a) {
-  for (i=10; i<=n; i++) {
-    if (i%10==0) {
-      c++;
-      s+=i;
-      cout<<i<<endl;
-    }
-  }
-  return i;
-}
+
+int multiplos(int a);
 
 int main() {
   int m;
@@ -26,3 +18,13 @@ int main() {
   return 0;
 }
 
+int multiplos(int a) {
+  for (i=10; i<=n; i++) {
+    if (i%10==0) {
+      c++;
+      s+=i;
+      cout<<i<<" ";
+    }
+  }
+  return i;
+}
