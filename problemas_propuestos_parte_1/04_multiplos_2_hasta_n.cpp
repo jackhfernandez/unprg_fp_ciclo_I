@@ -4,16 +4,7 @@
 using namespace std;
 int n=0; int s=0; int c=0; int i;
 
-int multiplos() {
-	for (i=2; i<=n; i++){
-		if (i%2==0) {
-  	  c++;
-		  s+=i;
-		  cout<<i<<endl; 
-		}
-	}
-	return i;
-}
+int multiplos();
 
 int main() {
 	cout<<"Programa para mostrar los multiplos de 2. Desde 1 hasta n"<<endl;
@@ -24,4 +15,15 @@ int main() {
 	cout<<"Cantidad de nros: "<<c<<endl; cout<<"La suma es: "<<s;
 	
 	return 0;
+}
+
+int multiplos() {
+	for (i=2; i<=n; i++){
+		if (i%2==0) {
+  	  c++;
+		  s+=i;
+		  cout<<i<<" "; 
+		}
+	}
+	return i;
 }

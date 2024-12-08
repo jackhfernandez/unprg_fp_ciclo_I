@@ -4,13 +4,7 @@
 using namespace std;
 int s=0; int a=0; int n;
 
-// Funcion para mostrar los cuadrados
-int suma_cuadrados(int a) {
-  for (int i=n; i<=100; i+=4) {
-    s+=i*i;
-  }
-  return s;
-}
+int suma_cuadrados(int a);
 
 int main() {
   cout<<"Programa para mostrar cuadrados desde n hasta 100 con sep de 4"<<endl;
@@ -20,4 +14,11 @@ int main() {
   cout<<"La suma es "<<a<<endl;
 
   return 0;
+}
+
+int suma_cuadrados(int a) {
+  for (int i=n; i<=100; i+=4) {
+    s+=i*i;
+  }
+  return s;
 }
