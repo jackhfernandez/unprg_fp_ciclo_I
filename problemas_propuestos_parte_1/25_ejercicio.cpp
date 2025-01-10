@@ -1,23 +1,31 @@
+/* Dado un número menor que 10, hallar su tabla de multiplicar por duplicado,
+es decir, empezando por el cero y por el 10 de forma alternativa.*/
+
 #include <iostream>
+#include <iomanip>
+using namespace std;
 
 int main() {
     int numero;
+    cout<<"\nPrograma mostrar multiplicacion de n de forma alternada\n"<<endl;
 
     // Solicitar el número al usuario
-    std::cout << "Ingrese un número menor que 10: ";
-    std::cin >> numero;
+    cout << "Ingrese un numero menor que 10: ";
+    cin >> numero;
 
     // Verificar que el número sea menor que 10
     if (numero >= 10) {
-        std::cout << "El número debe ser menor que 10." << std::endl;
+        cout << "\nEl numero debe ser menor que 10" << endl;
         return 1;
     }
 
     // Imprimir la tabla de multiplicar de forma alternada
-    std::cout << "Tabla de multiplicar de " << numero << ":\n";
+    cout << "\nTabla de multiplicar de " << numero << ":\n"<<endl;
     for (int i = 0, j = 10; i <= 10; ++i, --j) {
-        std::cout << numero << " x " << i << " = " << numero * i << "\t";
-        std::cout << numero << " x " << j << " = " << numero * j << std::endl;
+        cout << numero << " x "<<setw(2) << i << " = "
+                         <<setw(3)<< numero * i << "\t";
+        cout << numero << " x "<<setw(2) << j << " = "
+                        <<setw(3)<< numero * j << endl;
     }
 
     return 0;
