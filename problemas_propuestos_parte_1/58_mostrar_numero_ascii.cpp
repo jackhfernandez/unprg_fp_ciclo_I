@@ -1,3 +1,5 @@
+/* Introducir un número ASCII y mostrar su carácter correspondiente*/
+
 #include <iostream>
 using namespace std;
 
@@ -5,7 +7,8 @@ int main() {
     int n; // numero en ascii
 
     // Solicitar al usuario que introduzca un numero ASCII
-    cout << "Introduce un numero ASCII (0-127): ";
+    cout<<"\nPrograma para mostrar el caracter de un numero en ASCII\n"<<endl;
+    cout<<"Introduce un numero ASCII (0-127): ";
     cin >> n;
 
   // Verificar si el numero esta en el rango valido

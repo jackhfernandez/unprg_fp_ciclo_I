@@ -1,3 +1,5 @@
+/* Introducir un número base decimal y escribirlo en una base dada.*/
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -24,6 +26,7 @@ string convertToBase(int decimalNumber, int base) {
 int main() {
     int decimalNumber, base;
 
+    cout<<"\nPrograma para convertir un nro decimal a base dada\n"<<endl;
     // Solicitar al usuario un numero en base decimal
     cout << "Introduce un numero en base decimal: ";
     cin >> decimalNumber;
