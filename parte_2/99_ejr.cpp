@@ -11,12 +11,26 @@ y el tercero el número de alumnos por curso. Se guardarán las notas de los alu
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
 const int NUM_CENTROS =  5;
 const int NUM_CURSOS  =  6; 
 const int NUM_ALUMNOS = 30;
+
+srand(time(NULL));
+
+void llenarNotasAleat(double A[NUM_CENTROS][NUM_CURSOS][NUM_ALUMNOS]) {
+  for (int centro = 0; centro < NUM_CENTROS; ++centro) {
+    for ( int curso = 0; curso < NUM_CURSOS; ++curso) {
+      for ( int alumno = 0; alumno < NUM_ALUMNOS; ++alumno) {
+        A[centro][curso][alumno] = ( rand() % 3) + 5;
+      }
+    }
+  }
+}
+
 
 void calcularNotaMediaPorCurso(double A[NUM_CENTROS][NUM_CURSOS][NUM_ALUMNOS]) {
   for(int centro = 0; centro < NUM_CENTROS; ++centro) {
@@ -94,17 +108,9 @@ void encontrarMejorAlumnoPorCurso(double A[NUM_CENTROS][NUM_CURSOS][NUM_ALUMNOS]
 }
 
 int main() {
-  double A[NUM_CENTROS][NUM_CURSOS][NUM_ALUMNOS] = {14, 15, 13, 12, 11, 8, 16, 11, 10, 13, 7, 17, 11, 8, 16,
-                                                    15, 13, 12, 10,11, 8, 16, 11, 10, 13, 7, 17, 11, 8, 16, 
-                                                    14, 15, 13, 12, 11, 8, 16, 11, 10, 13, 7, 17, 11, 8, 12,
-                                                    14, 13, 12, 11, 11, 16, 11, 10, 13, 7, 17, 11, 8, 11,
-                                                    14, 15, 13, 12, 11, 8, 16, 11, 10, 13, 7, 19, 11, 8, 18,
-                                                    14, 15, 18, 12, 11, 8, 16, 11, 10, 13, 7, 17, 11, 8, 13,
-                                                    14, 15, 13, 12, 11, 8, 16, 11, 10, 13, 7, 17, 11, 8, 14,
-                                                    14, 15, 10, 12, 11, 8, 16, 11, 19, 13, 7, 17, 11, 8, 15,
-                                                    14, 15, 13, 12, 11, 9, 16, 11, 10, 13, 7, 17, 17, 8, 7,
-                                                    14, 15, 13, 12, 11, 8, 16, 11, 16, 13, 7, 18, 11, 8, 16};
+  double A[NUM_CENTROS][NUM_CURSOS][NUM_ALUMNOS] = {};
 
+  llenarNotasAleat(A);
   calcularNotaMediaPorCurso(A);
   calcularNotaMediaPorCentro(A);
   calcularNotaMediaGlobal(A);

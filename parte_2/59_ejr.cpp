@@ -17,7 +17,7 @@ int main() {
 
   for (int i = 0; i < size; ++i) {
     if (L[i] % 2 == 0) {
-      cout << L[i] << " ";
+      cout << L[i] << " "; //  Muestra los pares
     }
   }
   cout << endl;
