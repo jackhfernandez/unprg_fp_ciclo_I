@@ -20,7 +20,7 @@ int main() {
       cout << setw(2) << L[i] << " "; // Muestra los impares
       suma += i + 1;       // Muestra la suma de impares
     }
-    if ( (i + 1) % 10 == 0) cout << endl;
+    if ( (L[i] + 1) % 10 == 0) cout << endl;
   }
   cout << "\nLa suma de los impares es " << suma << endl;
 
