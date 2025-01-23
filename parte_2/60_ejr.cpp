@@ -2,6 +2,7 @@
 - Imprimir y sumar los elementos que ocupan las posiciones impares de la lista anterior.*/
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -16,11 +17,12 @@ int main() {
 
   for (int i = 0; i < size; ++i ) {
     if (L[i] % 2 == 1) {
-      cout << L[i] << " "; // Muestra los impares
-      suma += i + 1;           // Muestra la suma de impares
+      cout << setw(2) << L[i] << " "; // Muestra los impares
+      suma += i + 1;       // Muestra la suma de impares
     }
+    if ( (i + 1) % 10 == 0) cout << endl;
   }
-  cout << "\n\nLa suma de los impares es " << suma << endl;
+  cout << "\nLa suma de los impares es " << suma << endl;
 
   return 0;
 }
